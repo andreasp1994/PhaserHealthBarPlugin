@@ -6,24 +6,28 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var HealthBar = (function (_super) {
     __extends(HealthBar, _super);
-    function HealthBar(game, spriteToAttach, width, height, _xOffset, _yOffset) {
+    function HealthBar(game, spriteToAttach, width, height, _xOffset, _yOffset, bgColor, fgColor) {
         if (_xOffset === void 0) { _xOffset = 0; }
         if (_yOffset === void 0) { _yOffset = 0; }
+        if (bgColor === void 0) { bgColor = "#DD1111"; }
+        if (fgColor === void 0) { fgColor = "#11DD11"; }
         _super.call(this, game, spriteToAttach.body.position.x + _xOffset, spriteToAttach.body.position.y + _yOffset);
         this.spriteToAttach = spriteToAttach;
         this.width = width;
         this.height = height;
         this._xOffset = _xOffset;
         this._yOffset = _yOffset;
+        this.bgColor = bgColor;
+        this.fgColor = fgColor;
         //Draw bar background
         this.bmdBg = game.add.bitmapData(width, height);
-        this.bmdBg.ctx.fillStyle = "#DD1111";
+        this.bmdBg.ctx.fillStyle = this.bgColor;
         this.bmdBg.ctx.fillRect(0, 0, width, height);
         this.bgSprite = game.add.sprite(this.x, this.y, this.bmdBg);
         this.bgSprite.anchor.set(0.5);
         //Draw bar foreground
         this.bmdFg = game.add.bitmapData(width, height);
-        this.bmdFg.ctx.fillStyle = "#11DD11";
+        this.bmdFg.ctx.fillStyle = this.fgColor;
         this.bmdFg.ctx.fillRect(0, 0, width, height);
         this.fgSprite = game.add.sprite(this.x, this.y, this.bmdFg);
         this.fgSprite.anchor.set(0.5);
