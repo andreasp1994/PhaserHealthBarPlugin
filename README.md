@@ -47,6 +47,7 @@ This will download the necessary typescript dependencies for you in order to be 
 + Provide the option to use images<br />
 + Code optimizations<br />
 + Error handling<br />
++ Display only onChange option
 + Events?<br />
 
 ## Contributing

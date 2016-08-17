@@ -35,6 +35,15 @@ export class HealthBar extends Phaser.Sprite {
         this.bgSprite.position.y = this.spriteToAttach.position.y+this.yOffset;
         this.fgSprite.position.x = this.spriteToAttach.position.x + this.xOffset;
         this.fgSprite.position.y = this.spriteToAttach.position.y+this.yOffset;
+
+        //Delete on destroy
+        if (this.spriteToAttach.health == 0) {
+            this.bmdFg.destroy();
+            this.bmdBg.destroy();
+            this.bgSprite.destroy();
+            this.fgSprite.destroy();
+            this.destroy();
+        }
     }
 
     set xOffset(xOff : number){
