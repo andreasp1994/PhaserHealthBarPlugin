@@ -41,7 +41,7 @@ This will download the necessary typescript dependencies for you in order to be 
 
 ## Screenshots
 <br />
-[[https://www.anony.ws/i/2016/08/17/Screenshotfrom2016-08-1713-48-59.png]]
+![Screeshot](https://www.anony.ws/i/2016/08/17/Screenshotfrom2016-08-1713-48-59.png)
 
 ## TODO:
 + Provide the option to use images<br />
