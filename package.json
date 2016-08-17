@@ -1,0 +1,20 @@
+{
+  "name": "phaser-healthbar",
+  "version": "1.0.0",
+  "description": "An easy to use healthbar plugin for Phaser game objects",
+  "main": "dist/healthBar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "phaser",
+    "healthbar",
+    "plugin"
+  ],
+  "author": "Antreas Pogiatzis",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^1.8.10",
+    "typings": "^1.3.2"
+  }
+}
